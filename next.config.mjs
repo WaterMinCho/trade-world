@@ -5,7 +5,11 @@ const withBundleAnalyzerConfig = withBundleAnalyzer({
 });
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  swcMinify: true,
+  experimental: {
+    // modularizelmports: {},//나중에 사용할거.
+  },
+};
 
 export default nextConfig;
-
