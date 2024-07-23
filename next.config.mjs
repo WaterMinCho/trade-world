@@ -8,7 +8,7 @@ const withBundleAnalyzerConfig = withBundleAnalyzer({
 const nextConfig = {
   swcMinify: true,
   experimental: {
-    // modularizelmports: {},//나중에 사용할거.
+    // modularizelmports: {},// 나중에 사용할거.
   },
 };
 
