@@ -1,16 +1,17 @@
 {
   "name": "trade-world",
-  "version": "0.1.0",
+  "packageManager": "yarn@4.3.1",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "dev:client": "yarn workspace client dev",
-    "build:client": "yarn workspace client build",
-    "start:client": "yarn workspace client start",
-    "dev:server": "yarn workspace server start:dev",
-    "build:server": "yarn workspace server build",
-    "start:server": "yarn workspace server start:prod"
+    "dev": "yarn workspaces run dev",
+    "build": "yarn workspaces run build",
+    "start": "yarn workspaces run start"
+  },
+  "dependencies": {
+    "@nestjs/cli": "^10.4.2",
+    "global": "^4.4.0"
   }
 }
