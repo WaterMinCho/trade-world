@@ -2,27 +2,15 @@
   "name": "trade-world",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev & open-cli http://localhost:3000",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@tanstack/react-query": "^5.51.11",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@next/bundle-analyzer": "^14.2.5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "open-cli": "^8.0.0",
-    "typescript": "^5"
-  },
-  "packageManager": "yarn@4.3.1"
+    "dev:client": "yarn workspace client dev",
+    "build:client": "yarn workspace client build",
+    "start:client": "yarn workspace client start",
+    "dev:server": "yarn workspace server start:dev",
+    "build:server": "yarn workspace server build",
+    "start:server": "yarn workspace server start:prod"
+  }
 }
