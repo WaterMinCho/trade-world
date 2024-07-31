@@ -3,15 +3,18 @@
   "packageManager": "yarn@4.3.1",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "apps/*"
   ],
   "scripts": {
-    "dev": "yarn workspaces run dev",
+    "dev": "concurrently \"yarn workspace @trade-world/client dev\" \"yarn workspace @trade-world/server dev\"",
     "build": "yarn workspaces run build",
-    "start": "yarn workspaces run start"
+    "start": "concurrently \"yarn workspace @trade-world/client start\" \"yarn workspace @trade-world/server start\""
   },
   "dependencies": {
     "@nestjs/cli": "^10.4.2",
     "global": "^4.4.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
